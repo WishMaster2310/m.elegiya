@@ -1,0 +1,25 @@
+{% extends "__layout.html" %}
+{% block content %}
+<div class="bradcrumbs">
+	<a href="/" class="bradcrumbs__item">Потолки</a><a href="/" class="bradcrumbs__item">Грильято</a>
+</div>
+<div class="product-list">
+{% for item in base.products %}
+	<div class="product-list__item">
+		<a class="product" href="#">
+			<div class="product__img">
+				<img src="files/{{ item.img }}" alt="">
+			</div>
+			<div class="product__data">
+				{% if item.action %}<div class="product__label">Акция</div>{% endif %}
+				<div class="product__link">{{ item.name }}</div>
+				{% if item.action %}<div class="product__oldcost">{{ item.oldcost }}</div>{% endif %}
+				
+				<div class="product__cost">{{ item.cost }}</div>
+			</div>
+		</a>
+	</div>
+{% endfor %}
+</div>
+<a class="product-greed"><i class="fa fa-refresh"></i> Показать еще 20</a>
+{% endblock %}

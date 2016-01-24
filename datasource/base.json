@@ -1,0 +1,178 @@
+{
+	"title": "dsdwww",
+	"companyName": "Торговый Дом Элегия",
+	"products": [
+		{
+				"name": "Потолочная плита Эконом класса",
+				"href": "#",
+				"cost": "50.04 р/шт",
+				"oldcost": "75 р/шт",
+				"action": true,
+				"img": "30ac40de0a4a09969bdc79d6ac713d.jpg"
+		},
+		{
+				"name": "Потолочная плита Нева",
+				"href": "#",
+				"cost": "50.04 р/шт",
+				"oldcost": "75 р/шт",
+				"action": true,
+				"img": "39afee52e3401c9e4252063338c325.jpg"
+		},
+		{
+				"name": "Cветильник LED Komtex 36 Вт",
+				"href": "#",
+				"cost": "1460,00р",
+				"oldcost": "2120р​",
+				"action": true,
+				"img": "0ca12ba2aa41d5a3eab5db6be72db3.jpg"
+		},
+		{
+				"name": "Потолочная плита Эконом класса",
+				"href": "#",
+				"cost": "50.04 р/шт",
+				"oldcost": "75 р/шт",
+				"action": false,
+				"img": "30ac40de0a4a09969bdc79d6ac713d.jpg"
+		},
+		{
+				"name": "Потолочная плита Нева",
+				"href": "#",
+				"cost": "50.04 р/шт",
+				"oldcost": "75 р/шт",
+				"action": false,
+				"img": "39afee52e3401c9e4252063338c325.jpg"
+		},
+		{
+				"name": "Cветильник LED Komtex 36 Вт",
+				"href": "#",
+				"cost": "1460,00р",
+				"oldcost": "2120р​",
+				"action": false,
+				"img": "0ca12ba2aa41d5a3eab5db6be72db3.jpg"
+		},
+		{
+				"name": "Потолочная плита Нева",
+				"href": "#",
+				"cost": "50.04 р/шт",
+				"oldcost": "75 р/шт",
+				"action": false,
+				"img": "39afee52e3401c9e4252063338c325.jpg"
+		},
+		{
+				"name": "Cветильник LED Komtex 36 Вт",
+				"href": "#",
+				"cost": "1460,00р",
+				"oldcost": "2120р​",
+				"action": false,
+				"img": "0ca12ba2aa41d5a3eab5db6be72db3.jpg"
+		},
+		{
+				"name": "Потолочная плита Эконом класса",
+				"href": "#",
+				"cost": "50.04 р/шт",
+				"oldcost": "75 р/шт",
+				"action": true,
+				"img": "30ac40de0a4a09969bdc79d6ac713d.jpg"
+		}
+	],
+	"listing": [
+		{
+			"name": "Потолки",
+			"href": "category",
+			"items": [
+				{
+					"name": "Грильято",
+					"href": "subcategory"
+				},
+				{
+					"name": "Реечные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Армстронг",
+					"href": "subcategory"
+				},
+				{
+					"name": "Натяжные",
+					"href": "subcategory"
+				}
+			]
+		},
+		{
+			"name": "Светильники",
+			"href": "category",
+			"items": [
+				{
+					"name": "Торгово-офисные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Промышленные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Административные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Интерьерные",
+					"href": "subcategory"
+				},
+				{
+					"name": "ЖКХ",
+					"href": "subcategory"
+				},
+				{
+					"name": "Уличные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Лампы",
+					"href": "subcategory"
+				},
+				{
+					"name": "Комплектующие",
+					"href": "subcategory"
+				}
+			]
+		},
+		{
+			"name": "Фасады",
+			"href": "category",
+			"items": [
+				{
+					"name": "Реечные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Касетные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Административные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Интерьерные",
+					"href": "subcategory"
+				},
+				{
+					"name": "ЖКХ",
+					"href": "subcategory"
+				},
+				{
+					"name": "Уличные",
+					"href": "subcategory"
+				},
+				{
+					"name": "Лампы",
+					"href": "subcategory"
+				},
+				{
+					"name": "Комплектующие",
+					"href": "subcategory"
+				}
+			]
+		}
+	]
+}

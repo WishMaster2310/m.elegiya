@@ -1,0 +1,12 @@
+<ul class="listing">
+	{% for item in base.listing %}
+		<div class="listing-item">
+			<a href="#" class="listing-item__title">{{ item.name }}&nbsp;<i class="fa fa-chevron-down"></i></a>
+			<div class="listing-item__content">
+				{% for link in item.items %}
+					<a href="/category" class="listing-item__link">{{ link.name }} <i class="fa fa-chevron-right"></i></a>
+				{% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</ul>

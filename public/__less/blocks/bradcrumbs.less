@@ -1,0 +1,25 @@
+.bradcrumbs {
+	padding: 10px;
+
+	a {
+		display: inline-block;
+		margin-right: 8px;
+		color: #000;
+		color: fade(#000, 50%);
+
+		&:after {
+			content: "/";
+			display: inline-block;
+			margin-left: 5px;
+		}
+
+		&:last-child {
+			text-decoration: none;
+			color: #000;
+			&:after {
+				display: none;
+			}
+		}
+
+	}
+}

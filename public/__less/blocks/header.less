@@ -1,0 +1,52 @@
+.header {
+	background-color: #fff;
+	border-bottom: 1px solid darken(@gray, 10%);
+	&-top {
+		display: table;
+		width: 100%;
+
+		&__col {
+			display: table-cell;
+			padding: 10px 0;
+			vertical-align: middle;
+		}
+	}
+
+	&__tel {
+		text-decoration: none;
+		background-color: lighten(@gray, 3%);
+		padding: 5px;
+
+		&-link {
+			text-decoration: none;
+			line-height: 1;
+			color: #000;
+		}
+	}
+
+	&-anchors {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+
+		&__item {
+			display: table-cell;
+			background-color: lighten(@gray, 5%);
+			vertical-align: middle;
+			text-align: center;
+			padding: 10px 5px;
+			border-left: 1px solid darken(@gray, 10%);
+			text-decoration: none;
+			color: #000;
+
+			&:hover {
+				background-color: fade(#000, 20%);
+				color: white;
+			}
+
+			&:first-child {
+				border-left: 0;
+			}
+		}
+	}
+}

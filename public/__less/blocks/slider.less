@@ -1,0 +1,35 @@
+.slider {
+	margin-bottom: 30px;
+	border: 1px solid @gray;
+	padding-top: 10px;
+	background-color: #fff;
+	&__item {
+		margin-bottom: 5px;
+		transform: translateZ(0);
+	}
+
+	.owl-dots {
+		text-align: center;
+		margin-left: -10px;
+		padding: 5px 0 6px;
+		background-color: #fff;
+
+	}
+
+	.owl-dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: @gray;
+		display: inline-block;
+		text-align: center;
+		margin-left: 10px;
+		margin-bottom: 0;
+		vertical-align: middle;
+
+		&.active {
+			background-color: @orange;
+		}
+	}
+
+}

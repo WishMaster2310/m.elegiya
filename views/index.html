@@ -1,0 +1,30 @@
+{% extends "__layout.html" %}
+{% block activemenu1 %}asa{% endblock %}
+{% block content %}
+	<div class="slider j-slider">
+		{% for item in base.products %}
+			{% if item.action %}
+				<div class="slider__item">
+					<a href="#"  class="product">
+						<div class="product__img">
+							<img src="files/{{ item.img }}" alt="">
+						</div>
+						<div class="product__data">
+							<div class="product__label">Акция</div>
+							<div class="product__link">{{ item.name }}</div>
+							<div class="product__oldcost">{{ item.oldcost }}</div>
+							<div class="product__cost">{{ item.cost }}</div>
+						</div>
+					</a>
+			</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	{% include "__blocks/__catalog.html" %}
+
+	<div class="container typography">
+		<h1>Грильято, Армстронг, реечные подвесные потолки — лучшие цены на рынке</h1>
+		<p>Тех, кто приступает к строительству или ремонту, безусловно, интересуют такие вопросы, как стоимость подвесного потолка, вид конструкции и его основные преимущества. Современные потолочные системы отвечают высоким стандартам качества, обеспечивают хорошую звукоизоляцию и удерживают влагу, наряду со своими эстетическими качествами. Но как выбрать подходящий вариант по бюджету и особенностям?</p>
+	</div>
+	
+{% endblock %}
