@@ -1,0 +1,50 @@
+.sub-category {
+	margin-bottom: 20px;
+	&__img {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 100%;
+		min-height: 100%;
+
+		&-placeholder {
+			height: 200px;
+			overflow: hidden;
+			position: relative;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 10px;
+		background-color: #fff;
+		margin-bottom: 8px;
+		text-decoration: none;
+		border-bottom: 1px solid darken(@gray, 10%);
+		color: #3E3E3E;
+		font-size: 16px;
+		position: relative;
+
+		i {
+			font-size: 12px;
+			color: darken(@gray, 10%);
+
+			position: absolute;
+			top: 50%;
+			margin-top: -6px;
+			right: 10px;
+		}
+	}
+
+	&__lead {
+		font-size: 1.1em;
+		font-weight: bold;
+		display: inline-block;
+		width: 100%;
+		color: @orange;
+	}
+}

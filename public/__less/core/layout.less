@@ -8,6 +8,15 @@ body {
 	box-sizing: border-box;
 }
 
+sup {
+	vertical-align: super;
+	font-size: .7em;
+}
+
+strong {
+	font-weight: bold;
+}
+
 .h1 {
 	font-size: @size-h1;
 	margin-bottom: @heading-margin;
@@ -16,4 +25,35 @@ body {
 .container {
 	padding-left: 10px;
 	padding-right: 10px;
+
+	&--white-bg {
+		background-color: #fff;
+		padding: 15px 10px;
+	}
 }
+
+.page-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.img {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	background-color: #fff;
+	border-bottom: 1px solid #cdcdcd;
+	margin: 20px 0;
+}
+
+.well {
+  padding: 20px 10px 20px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #cdcdcd;
+  border-left: 2px solid @orange;
+  color: #595959;
+  margin-bottom: 20px;	
+
+}
+
