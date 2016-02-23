@@ -1,0 +1,33 @@
+.buyer-block {
+	padding: 10px;
+	background-color: #fff;
+	border-bottom: 1px solid darken(@gray, 10%);
+
+	&__props {
+		list-style-type: none;
+		margin: 0 0 10px 0;
+		padding: 0;
+
+		&-item {
+			padding: 5px 0;
+		}
+	}
+
+	&__form {
+		display: table;
+		width: 100%;
+
+		&-col {
+			display: table-cell;
+			vertical-align: middle;
+
+			&--left {
+				width: 40%;
+			}
+
+			&--right {
+				padding-left: 10px;
+			}
+		}
+	}
+}

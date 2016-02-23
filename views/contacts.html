@@ -1,0 +1,246 @@
+{%- macro staff(item) %}
+<div class="staff">
+	<div class="staff__avatar">
+		<img src="/uploads/{{ item.avatar }}" alt="{{ item.name }}">
+	</div>
+	<div class="staff__data">
+		<ul class="staff__data-list">
+			<li class="staff__name">{{ item.name }}</li>
+			{% if item.post -%}<li class="staff__post">{{ item.post }}</li>{% endif -%}
+			{% for tel in item.tel -%}<li class="staff__tel"><i class="fa fa-phone"></i>&nbsp;{{ tel }}</li>{% endfor -%}
+			{% if item.email -%}<li><i class="fa fa-envelope-o"></i>&nbsp;<a class="staff__email" href="mailto: {{ item.email }}">{{ item.email }}</a></li>{% endif -%}
+		</ul>
+	</div>
+</div>	
+{% endmacro -%}
+
+{% extends "__layout.html" %}
+{%- set mskstaff = [
+	{
+		post: "Отдел продаж",
+		name: "Иванов Алексей",
+		tel: ["(495) 268-12-78", "(906) 073-44-99"],
+		email: "a.ivanov@pro-potolki.ru",
+		avatar: '2596d83aa04b44802ab1775e942124.jpg'	
+	},
+	{
+		post: "Отдел продаж",
+		name: "Дилион Ирина",
+		tel: ["(906) 067-44-99"],
+		email: "i.dilion@pro-potolki.ru",
+		avatar: 'f187419b9148adb0a89902850c7754.jpg'	
+	}
+] -%}
+{%- set kndstaff = [
+	{
+		post: "Отдел продаж",
+		name: "Кирилл Прошин",
+		tel: ["(861) 203-47-99"],
+		email: "k.proshin@pro-potolki.ru",
+		avatar: '642b26007743e889f5fbf184c147c3.jpg'	
+	}
+] -%}
+{%- set spbstaff = [
+	{
+		post: "Офис менеджер",
+		name: "Переверзева Дарина",
+		tel: ["(812) 495-44-99"],
+		email: "a.kiku@pro-potolki.ru",
+		avatar: 'f187419b9148adb0a89902850c7754.jpg'	
+	},
+	{
+		post: "Руководитель отдела продаж",
+		name: "Колосова Анна",
+		tel: ["(812) 495-44-99 доб.101", "(965) 089-99-39"],
+		email: "a.kolosova@pro-potolki.ru",
+		avatar: 'd4495805294e79a5b00a4ba47bf905.jpg'	
+	},
+	{
+		post: "Отдел продаж",
+		name: "Трошкова Екатерина",
+		tel: ["(812) 495-44-99 доб.115", "(965) 089-99-45"],
+		email: "k.trochkova@pro-potolki.ru",
+		avatar: '7d750451d34ba3abc8c4a8daea0ea2.jpg'	
+	},
+	{
+		post: "Отдел продаж",
+		name: "Екимов Владимир",
+		tel: ["(812) 495-44-99 доб.131", "(965) 089-99-37"],
+		email: "v.ekimov@pro-potolki.ru",
+		avatar: 'ccd459a36947e0bf7e18fb96e89357.jpg'	
+	},
+	{
+		post: "Отдел продаж",
+		name: "Титова Светлана",
+		tel: ["(812) 495-44-99 доб.112", "(965) 089-99-38"],
+		email: "s.titova@pro-potolki.ru",
+		avatar: '9b97cf95164c15abf2b5089100fc11.jpg'	
+	},
+	{
+		post: "Отдел бухгалтерии",
+		name: "Цымбалова Анастасия",
+		tel: ["(812) 495-44-99 доб.113"],
+		email: "a.tsymbalova@pro-potolki.ru",
+		avatar: 'f187419b9148adb0a89902850c7754.jpg'	
+	},
+	{
+		post: "Отдел бухгалтерии",
+		name: "Неволина Таисия",
+		tel: ["(495) 646-74-60 доб.103", "(965) 089-99-40"],
+		email: "t.nevolina@pro-potolki.ru",
+		avatar: 'df358dc0d248c6b3e3e39c32a621ff.jpg'	
+	},
+	{
+		post: "Отдел сервиса",
+		name: "Дмитрий Михайлов",
+		tel: ["(812) 495-44-99", "(965) 089-99-47"],
+		avatar: 'ccd459a36947e0bf7e18fb96e89357.jpg'	
+	},
+	{
+		post: "Отдел логистики",
+		name: "Колотовский Станислав",
+		tel: ["(812) 495-44-99 доб.114", "(965) 089-99-51"],
+		email: "s.kolotovskiy@pro-potolki.ru",
+		avatar: 'ccd459a36947e0bf7e18fb96e89357.jpg'	
+	}
+] -%}
+{% block content %}
+<div class="container">
+	<div class="page-title">Контакты</div>
+	<div class="contact-block mb20">
+		<a href="tel: +78007004499" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-phone"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">8 (800) 700-44-99</span>
+			</div>
+		</a>
+
+		<a href="mailto: pro-potolki@mail.ru" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-envelope-o"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">pro-potolki@mail.ru</span>
+			</div>
+		</a>
+
+		<a href="http://vk.com/pro_potolki" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-vk"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">vk.com/pro_potolki</span>
+			</div>
+		</a>
+
+		<a href="/uploads/8cb7a9d75e48e3be37deb2fe732538.pdf" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-file-pdf-o"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">Реквизиты: ООО ТД «ЭЛЕГИЯ»</span>
+			</div>
+		</a>
+	</div>
+
+	<div class="page-title">Контакты в Санкт-Петербурге</div>
+	<div class="contact-block">
+		<a href="tel: +78124954499" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-phone"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">8 (812) 495-44-99</span>
+			</div>
+		</a>
+
+		<div class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-map-marker"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">Ленинский пр., д.140</span>
+				<span class="contact-block__info">Открыть карту</span>
+			</div>
+		</div>
+	</div>
+	{% for i in spbstaff %}
+		{{ staff(i) }}
+	{% endfor %}
+	<div class="mb20"></div>
+	<div class="page-title">Контакты в Москве</div>
+	<div class="contact-block">
+		<a href="tel: +74952681278" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-phone"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">8 (495) 268-12-78</span>
+			</div>
+		</a>
+
+		<div class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-map-marker"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">ул. Складочная, д.6, стр.4, офис 200</span>
+				<span class="contact-block__info">Открыть карту</span>
+			</div>
+		</div>
+	</div>
+	{% for i in mskstaff %}
+		{{ staff(i) }}
+	{% endfor %}
+
+	<div class="mb20"></div>
+	<div class="page-title">Контакты в Краснодаре</div>
+	<div class="contact-block">
+		<a href="tel: +78612034799" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-phone"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">(861) 203-47-99</span>
+			</div>
+		</a>
+
+		<div class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-map-marker"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">ул. Селезнева, д.2, офис 411а, 4&nbsp;этаж.</span>
+				<span class="contact-block__info">Открыть карту</span>
+			</div>
+		</div>
+	</div>
+	{% for i in kndstaff %}
+		{{ staff(i) }}
+	{% endfor %}
+	<div class="mb20"></div>
+	<div class="page-title">Контакты в Краснодаре</div>
+	<div class="contact-block">
+		<a href="tel: +78612034799" class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-phone"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">(861) 203-47-99</span>
+			</div>
+		</a>
+
+		<div class="contact-block__unit">
+			<div class="contact-block__icon">
+				<i class="fa fa-map-marker"></i>
+			</div>
+			<div class="contact-block__text">
+				<span class="contact-block__label">ул. Селезнева, д.2, офис 411а, 4&nbsp;этаж.</span>
+				<span class="contact-block__info">Открыть карту</span>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

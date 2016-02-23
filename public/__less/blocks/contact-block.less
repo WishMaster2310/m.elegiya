@@ -1,0 +1,46 @@
+.contact-block {
+	&__unit {
+		display: table;
+		width: 100%;
+		border-bottom: 1px dashed darken(@gray, 10%);
+		text-decoration: none;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+	}
+
+	&__icon {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50px;
+		text-align: center;
+		padding: 10px 0;
+		background-color: #fff;
+		color: @orange;
+		//border-right: 1px solid lighten(@gray, 5%);
+		font-size: 20px;
+		
+
+	}
+
+	&__text {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 10px 0;
+		background-color: #fff;
+	}
+
+	&__info {
+		color: #BAB8B8;
+		font-size: 12px;
+	}
+
+	&__label {
+		color: #000;
+		display: block;
+		width: 100%;
+		font-size: 16px;
+	}
+}

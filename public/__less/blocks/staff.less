@@ -1,0 +1,54 @@
+.staff {
+	display: table;
+	width: 100%;
+	margin: 8px 0;
+	border-bottom: 1px solid darken(@gray, 10%);
+
+	&__avatar {
+		width: 30%;
+		display: table-cell;
+		vertical-align: middle;
+		background-color: #fff;
+		padding: 5px;
+		border-left: 2px solid @orange;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__data {
+		display: table-cell;
+		vertical-align: middle;
+		background-color: #fff;
+		padding: 10px 5px;
+
+		&-list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+
+			li {
+				padding: 2px 0;
+			}
+		}
+
+		i {
+			vertical-align: middle;
+			color: #c0c0c0;
+			margin-right: 4px;
+		}
+	}
+
+	&__post {
+		font-size: 12px;
+		padding-top: 0 !important;
+		padding-bottom: 8px !important;
+		color: #8E8E8E;
+	}
+
+	&__name {
+		font-weight: bold;
+	}
+}

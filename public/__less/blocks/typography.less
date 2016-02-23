@@ -30,4 +30,41 @@
 	img {
 		max-width: 100%;
 	}
+
+	table {
+		width: auto;
+
+		td {
+			padding: 5px 10px;
+		}
+
+		th {
+			background-color: #747474;
+			vertical-align: middle;
+			padding: 5px 10px;
+			text-align: left;
+			color: #fff;
+		}
+
+		thead {
+
+			td {
+				background-color: @orange;
+			}
+		}
+
+		tr {
+			&:nth-child(even) {
+				td {
+					background-color: #fff;
+				}
+			}
+
+			&:nth-child(odd) {
+				td {
+					background-color: #F7F7F7;
+				}
+			}
+		}
+	}
 }
