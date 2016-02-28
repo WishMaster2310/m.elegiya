@@ -1,0 +1,66 @@
+{% extends "__layout.html" %}
+{%- set gallery = [
+{
+	name: "Грильято - сотовый потолок фото",
+	count: 80,
+	img: "734523e348c34e5d8029796930a70ca5.jpg"
+},
+{
+	name: "Грильято ячеистый потолок",
+	count: 129,
+	img: "007428e1b4ba4868af9dc6ad1c151516.jpg"
+},
+{
+	name: "Натяжные потолки",
+	count: 30,
+	img: "f5276317a27d4162bef707e1d89d0726.jpg"
+},
+{
+	name: "Подвесные потолки Армстронг",
+	count: 14,
+	img: "armstrong-2013-11-14-393.jpg"
+},
+{
+	name: "Грильято - сотовый потолок фото",
+	count: 80,
+	img: "734523e348c34e5d8029796930a70ca5.jpg"
+},
+{
+	name: "Грильято ячеистый потолок",
+	count: 129,
+	img: "007428e1b4ba4868af9dc6ad1c151516.jpg"
+},
+{
+	name: "Натяжные потолки",
+	count: 30,
+	img: "f5276317a27d4162bef707e1d89d0726.jpg"
+},
+{
+	name: "Подвесные потолки Армстронг",
+	count: 14,
+	img: "armstrong-2013-11-14-393.jpg"
+}
+] -%}
+{% block content %}
+<div class="bradcrumbs">
+	<a href="/gallery_list" class="bradcrumbs__item">Галлерея</a><a href="/gallery" class="bradcrumbs__item">Подвесные потолки Грильято</a>
+</div>
+
+<div class="container">
+	<ul class="gallery-list">
+	{%- for item in gallery %}
+		<li class="gallery-list__item">
+			<a href="#" class="gallery-list__link">
+				<div class="gallery-list__img-box">
+					<img  class="gallery-list__img" src="/uploads/{{ item.img }}" alt="">
+				</div>
+				<div class="gallery-list__name">{{ item.name|safe }}</div>
+			</a>
+		</li>
+	{% endfor -%}
+		
+	</ul>
+</div>
+
+{% include "__blocks/__calline.html" %}
+{% endblock %}
