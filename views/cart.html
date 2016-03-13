@@ -1,0 +1,38 @@
+{% extends "__layout.html" %} {% block content %}
+<div class="mb20"></div>
+<div class="container typography">
+    <h1>У вас в корзине:</h1>
+</div>
+<div class="product-list">
+{% for item in base.products %}
+    <div class="product-list__item">
+        <div class="product">
+            <div class="product__img">
+                <img src="files/{{ item.img }}" alt="">
+            </div>
+            <div class="product__data">
+                {% if item.action %}<div class="product__label">Акция</div>{% endif %}
+                <div class="product__link">{{ item.name }}</div>
+                {% if item.action %}<div class="product__oldcost">{{ item.oldcost }}</div>{% endif %}
+                <div class="product__cost">{{ item.cost }}</div>
+
+                <div class="product__controls">
+                    <div class="buyer-counter product__controls-counter">
+                        <a class="buyer-counter__btn buyer-counter__btn--countup" href="#">-</a>
+                        <input type="text" value="1" class="buyer-counter__input">
+                        <a class="buyer-counter__btn buyer-counter__btn--countdown" href="#">+</a>
+                    </div>  
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+<div class="container typography">
+    <h1>Торговый Дом &laquo;Элегия&raquo;&nbsp;-&nbsp;подвесные потолки оптом.</h1>
+    <img src="/uploads/373a354fb040eab84a8c0886724fba.jpg" class="img" alt="">
+    <p><strong><br />Торговый Дом &laquo;Элегия&raquo;</strong> существует на строительном рынке с ноября 2003 года. За это время 
+</div>
+{% endblock %}
