@@ -2730,6 +2730,7 @@ a {
   text-align: center;
   background-color: #F58220;
   font-weight: 600;
+  color: #fff;
 }
 .product-greed:hover {
   background-color: #d8690a;
@@ -3051,6 +3052,10 @@ a {
   text-decoration: none;
   bottom: 0;
 }
+.btn--gray {
+  background-color: #A5A5A5;
+  color: #fff;
+}
 .btn--block {
   display: block;
   width: 100%;
@@ -3118,6 +3123,99 @@ a {
   color: inherit;
   display: block;
   text-decoration: none !important;
+}
+.cat-filter {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.cat-filter__content {
+  display: none;
+}
+.cat-filter__toggler {
+  display: block;
+  padding: 10px;
+  background-color: #A5A5A5;
+  text-decoration: none;
+  border-bottom: 1px solid #8c8c8c;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+}
+.cat-filter__input {
+  display: inline-block;
+  height: 30px;
+  border: 1px solid #E6E6E6;
+  padding-left: 4px;
+  padding-right: 4px;
+  max-width: 35%;
+}
+.cat-filter__row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.cat-filter__col {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cat-filter__price {
+  padding: 10px;
+  background-color: #fff;
+}
+.cat-filter__unit-title {
+  padding: 10px;
+  font-weight: bold;
+  background-color: #d9d9d9;
+  border-bottom: 1px solid #c0c0c0;
+}
+.cat-filter__unit--active .cat-filter__unit-title {
+  background-color: #474747;
+  color: #fff;
+  border-bottom: 1px solid #2e2e2e;
+}
+.cat-filter__unit-content {
+  display: none;
+}
+.cat-filter__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.cat-filter__label::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #E6E6E6;
+  left: -25px;
+  top: 1px;
+}
+.cat-filter__label::after {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  font: normal normal normal 16px/1 FontAwesome;
+  left: -25px;
+  top: 0;
+  color: #F58220;
+}
+.cat-filter__checkbox {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 10px 10px 35px;
+  border-bottom: 1px solid #cdcdcd;
+}
+.cat-filter__checkbox input {
+  position: absolute;
+  left: -999em;
+  visibility: hidden;
+}
+.cat-filter__checkbox input:checked + .cat-filter__label::after {
+  content: "\f00c";
 }
 .mb20 {
   margin-bottom: 20px;

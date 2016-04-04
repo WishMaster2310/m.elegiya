@@ -3,8 +3,11 @@
 <div class="bradcrumbs">
 	<a href="/" class="bradcrumbs__item">Потолки</a><a href="/" class="bradcrumbs__item">Грильято</a>
 </div>
+{% include "__blocks/__filters.html" %}
+
 <div class="product-list">
 {% for item in base.products %}
+
 	<div class="product-list__item">
 		<a class="product" href="/product">
 			<div class="product__img">

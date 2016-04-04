@@ -13,4 +13,18 @@ $(document).ready(function() {
 		$('.menu-container').toggleClass('menu-container--active');
 	})
 
+	$('.cat-filter__unit-title').on('click', function() {
+		var parent = $(this).closest('.cat-filter__unit');
+		var content = $(parent).find('.cat-filter__unit-content');
+		$(content).slideToggle(300);
+		$(parent).toggleClass('cat-filter__unit--active')
+	});
+
+	$('.cat-filter__toggler').on('click', function() {
+		var parent = $(this).closest('.cat-filter');
+		var content = $(parent).find('.cat-filter__content');
+		$(content).slideToggle(500);
+		$(parent).toggleClass('cat-filter--active')
+	})
+
 });
