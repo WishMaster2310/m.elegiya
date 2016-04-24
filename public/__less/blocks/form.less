@@ -1,0 +1,31 @@
+.form {
+	&__control {
+		height: 36px;
+		border: 1px solid darken(@gray, 10%);
+		width: 100%;
+		padding: 0 10px;
+		font-family: inherit;
+		outline: none;
+
+		&--area {
+			height: 120px;
+			resize: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		&:focus {
+			border-color: @orange;
+		}
+	}
+
+	&__label {
+		margin-bottom: 5px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__row {
+		margin-bottom: 10px;
+	}
+}

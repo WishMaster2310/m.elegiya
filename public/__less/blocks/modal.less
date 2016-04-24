@@ -1,0 +1,27 @@
+.modal {
+	background-color: #fff;
+	padding: 20px;
+	width: 320px;
+	position: relative;
+
+	&__close {
+		display: inline-block;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 30px;
+		height: 30px;
+		background-color: lighten(@gray, 5%);
+		line-height: 30px;
+		text-align: center;
+		font-size: 25px;
+		border-radius: 50%;
+		color: darken(@gray, 40%);
+
+		&:hover, 
+		&:active {
+			background-color: @orange;
+			color: #fff;
+		}
+	}
+}

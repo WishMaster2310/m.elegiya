@@ -1,0 +1,29 @@
+<div style="display: none">
+	<div class="modal" id="calbackForm">
+		<div class="modal__close" onclick="$.arcticmodal('close')">&times;</div>
+		<div class="page-title">Заказать звонок</div>
+		<form class="form" action="order" method="GET">
+		  <div class="form__row">
+		    <label class="form__label"  for="calbackName">Имя:</label>
+		    <input type="text" id="calbackName" name="name" class="form__control" required>
+		  </div>
+
+		  <div class="form__row">
+		    <label class="form__label"  for="calbackTel">Телефон:</label>
+		    <input type="tel" id="calbackTel" name="tel" class="form__control" required>
+		  </div>
+
+		  <div class="form__row">
+		    <label class="form__label"  for="calbackCity">Город:</label>
+		    <input type="text" id="calbackCity" name="city" class="form__control" required>
+		  </div>
+
+		  <div class="form__row mb20">
+		    <label class="form__label" for="calbackCity">Время звонка:</label>
+		    <input type="time" id="calbackCity" name="time" class="form__control" >
+		  </div>
+
+		  <button type="submit" class="btn">Перезвоните мне</button>
+		</form>
+	</div>
+</div>

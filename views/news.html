@@ -1,0 +1,35 @@
+{% extends "__layout.html" %} {% block content %}
+<div class="mb20"></div>
+<div class="container typography">
+  <h1>Новости</h1>
+</div>
+<div class="news-list">
+  {% for news in base.news  %}
+    <div class="news">
+      <div class="news__date">{{ news.date }}</div>
+      {%- if news.title %}
+      <div class="news__title">{{ news.title|safe }}</div>  
+      {%- endif %}
+      {%- if news.gallery %}
+      <div class="news__slider">
+      <div class="slider  slider--nomb j-slider">
+        {%- for item in news.gallery %}
+          <div class="slider__item">
+            <div class="slider__img">
+              <img src="/uploads/{{ item }}" alt="">
+            </div>
+          </div>
+        {%- endfor %}
+      </div></div>  
+      {%- endif %}
+      {%- if news.text %}
+      <div class="news__text">{{ news.text|safe }}</div>  
+      {%- endif %}
+      {%- if news.content %}
+      <div class="news__content typography">{{ news.content|safe }}</div>  
+      <a href="#" class="btn btn--gray j-newsopen">Подробнее</a>
+      {%- endif %}
+    </div>
+  {% endfor %}
+</div>
+{% include "__blocks/__calline.html" %} {% endblock %}

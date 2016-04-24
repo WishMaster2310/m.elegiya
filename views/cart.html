@@ -1,38 +1,67 @@
 {% extends "__layout.html" %} {% block content %}
 <div class="mb20"></div>
 <div class="container typography">
-    <h1>У вас в корзине:</h1>
+  <h1>У вас в корзине:</h1>
 </div>
 <div class="product-list">
-{% for item in base.products %}
-    <div class="product-list__item">
-        <div class="product">
-            <div class="product__img">
-                <img src="files/{{ item.img }}" alt="">
-            </div>
-            <div class="product__data">
-                {% if item.action %}<div class="product__label">Акция</div>{% endif %}
-                <div class="product__link">{{ item.name }}</div>
-                {% if item.action %}<div class="product__oldcost">{{ item.oldcost }}</div>{% endif %}
-                <div class="product__cost">{{ item.cost }}</div>
-
-                <div class="product__controls">
-                    <div class="buyer-counter product__controls-counter">
-                        <a class="buyer-counter__btn buyer-counter__btn--countup" href="#">-</a>
-                        <input type="text" value="1" class="buyer-counter__input">
-                        <a class="buyer-counter__btn buyer-counter__btn--countdown" href="#">+</a>
-                    </div>  
-                </div>
-
-                
+  {% for item in base.products %}
+  <div class="product-list__item">
+    <div class="product">
+      <div class="product__img product__img--small">
+          <img src="files/{{ item.img }}" alt="">
+      </div>
+      <div class="product__data">
+        
+        {% if item.action %}
+        <div class="product__label">Акция</div>{% endif %}
+        <div class="product__link">{{ item.name }}</div>
+        {% if item.action %}
+        <div class="product__oldcost">{{ item.oldcost }}</div>{% endif %}
+        <div class="product__cost">{{ item.cost }}</div>
+        <div class="product__controls">
+            <div class="buyer-counter product__controls-counter">
+                <a class="buyer-counter__btn buyer-counter__btn--countup" href="#">-</a>
+                <input type="text" value="1" class="buyer-counter__input">
+                <a class="buyer-counter__btn buyer-counter__btn--countdown" href="#">+</a>
             </div>
         </div>
+      </div>
+      <div class="product__removebox">
+          <div class="product__remove">&times;</div>  
+        </div>
     </div>
-{% endfor %}
+  </div>
+  {% endfor %}
+</div>
+<div class="cart-summ">
+  Итого: <span class="cart-summ__count">13548.12</span> руб
 </div>
 <div class="container typography">
-    <h1>Торговый Дом &laquo;Элегия&raquo;&nbsp;-&nbsp;подвесные потолки оптом.</h1>
-    <img src="/uploads/373a354fb040eab84a8c0886724fba.jpg" class="img" alt="">
-    <p><strong><br />Торговый Дом &laquo;Элегия&raquo;</strong> существует на строительном рынке с ноября 2003 года. За это время 
+  <h1>Оформление заказа:</h1>
+</div>
+<form class="cart-form form" action="order" method="GET">
+  <div class="form__row">
+    <label class="form__label"  for="cartName">Имя:</label>
+    <input type="text" id="cartName" name="name" class="form__control" required>
+  </div>
+
+  <div class="form__row">
+    <label class="form__label"  for="cartEmail">Email:</label>
+    <input type="email" id="cartEmail" name="email" class="form__control" required>
+  </div>
+
+  <div class="form__row">
+    <label class="form__label"  for="cartTel">Телефон:</label>
+    <input type="tel" id="cartTel" name="tel" class="form__control" required>
+  </div>
+
+  <div class="form__row">
+    <label class="form__label" for="cartMsg">Комментарий:</label>
+    <textarea type="tel" id="cartMsg" name="msg" class="form__control form__control--area"></textarea>
+  </div>
+
+  <button type="submit" class="btn">Заказать</button>
+</form>
+<div class="container typography">
 </div>
 {% endblock %}

@@ -25,6 +25,19 @@ $(document).ready(function() {
 		var content = $(parent).find('.cat-filter__content');
 		$(content).slideToggle(500);
 		$(parent).toggleClass('cat-filter--active')
-	})
+	});
+
+	$('.j-newsopen').on('click', function(e) {
+		e.preventDefault();
+		var parent = $(this).closest('.news');
+		var hiddenText = $(parent).find('.news__content')
+		$(this).hide();
+		$(hiddenText).slideDown();
+	});
+
+	$('.j-calbackform').on('click', function(e) {
+		e.preventDefault();
+		$('#calbackForm').arcticmodal({})
+	});
 
 });

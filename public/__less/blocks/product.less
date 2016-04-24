@@ -14,13 +14,43 @@
 		img {
 			width: 100%;
 		}
+
+		&--small {
+			width: 20%;
+		}
 	}
 
 	&__data {
 		display: table-cell;
 		vertical-align: middle;
 		padding: 5px;
-		width: 60%;
+		//width: 60%;
+	}
+
+	&__removebox {
+		display: table-cell;
+		width: 40px;
+		text-align: left;
+		
+	}
+
+	&__remove {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background-color: lighten(@gray, 5%);
+		line-height: 30px;
+		text-align: center;
+		font-size: 25px;
+		border-radius: 50%;
+		color: darken(@gray, 40%);
+
+		&:hover, 
+		&:active {
+			background-color: @orange;
+			color: #fff;
+		}
+		
 	}
 
 	&__label {
